@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo useradd -c "Ansible User" -m ansible
+sudo cp -r /home/ec2-user/.ssh /home/ansible
+sudo chown -R ansible:ansible /home/ansible/.ssh
+echo "ansible ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
